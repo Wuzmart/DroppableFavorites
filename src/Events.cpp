@@ -70,7 +70,7 @@ inline void myEventSink::UpdateKeyCodes() {
     const auto userEvents = RE::UserEvents::GetSingleton();
     const auto new_key_keyboard = controlMap->GetMappedKey(userEvents->xButton, RE::INPUT_DEVICE::kKeyboard,
                                                        RE::UserEvents::INPUT_CONTEXT_ID::kItemMenu);
-    const auto new_key_gamepad = controlMap->GetMappedKey(userEvents->xButton, RE::INPUT_DEVICE::kGamepad,
+    const auto new_key_gamepad = controlMap->GetMappedKey(userEvents->ToggleMinimize, RE::INPUT_DEVICE::kGamepad,
                                                       RE::UserEvents::INPUT_CONTEXT_ID::kItemMenu);
     if (new_key_keyboard != key_keyboard) {
         logger::info("Key code for keyboard changed from {} to {}.", key_keyboard, new_key_keyboard);
